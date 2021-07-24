@@ -1,6 +1,17 @@
+import useHttp from '../hooks/useHttp';
+import BusinessInfo from '../components/BusinessInfo';
+
 const Others = (props) => {
+	const businessData = useHttp('Others');
+
 	return (
-		<p>Others</p>
+		<>
+			<ul>
+				{businessData.map(bus => 
+					<BusinessInfo key={bus.address} bus={bus} />
+				)}						
+			</ul>
+		</>
 	);
 };
 

@@ -11,6 +11,7 @@ const NavBar = () => {
 							<NavLink to='/doctors' activeClassName={classes.active}>Doctor's Office</NavLink>
 							<NavLink to='/entertainment' activeClassName={classes.active} >Entertainment</NavLink>
 							<NavLink to='/others' activeClassName={classes.active}>Others</NavLink>
+							<NavLink to='/addbusiness' activeClassName={classes.active}>Add Business</NavLink>
 					</ul>
 				</nav>
       </header>

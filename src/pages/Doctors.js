@@ -1,6 +1,18 @@
-const Doctors = (props) => {
+import useHttp from '../hooks/useHttp';
+import BusinessInfo from '../components/BusinessInfo';
+
+const Doctors = () => {
+
+	const businessData = useHttp("Doctor's Office");
+
 	return (
-		<p>Doctors</p>
+		<>
+			<ul>
+				{businessData.map(bus => 
+					<BusinessInfo key={bus.address} bus={bus} />
+				)}						
+			</ul>
+		</>
 	);
 };
 

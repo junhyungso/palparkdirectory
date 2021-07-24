@@ -1,6 +1,18 @@
-const Entertainment = (props) => {
+import useHttp from '../hooks/useHttp';
+import BusinessInfo from '../components/BusinessInfo';
+
+const Entertainment = () => {
+
+	const businessData = useHttp('Entertainment');
+
 	return (
-		<p>Entertainment</p>
+		<>
+			<ul>
+				{businessData.map(bus => 
+					<BusinessInfo key={bus.address} bus={bus} />
+				)}						
+			</ul>
+		</>
 	);
 };
 

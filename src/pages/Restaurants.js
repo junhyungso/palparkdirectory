@@ -1,6 +1,18 @@
+import useHttp from '../hooks/useHttp';
+import BusinessInfo from '../components/BusinessInfo';
+
 const Restaurants = (props) => {
+
+	const businessData = useHttp('Restaurant');
+
 	return (
-		<p>Restaurants</p>
+		<>
+			<ul>
+				{businessData.map(bus => 
+					<BusinessInfo key={bus.address} bus={bus} />
+				)}						
+			</ul>
+		</>
 	);
 };
 

@@ -11,6 +11,8 @@ import Restaurants from './pages/Restaurants';
 import Doctors from './pages/Doctors';
 import Entertainment from './pages/Entertainment';
 import Others from './pages/Others';
+import AddBusiness from './pages/AddBusiness';
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -31,6 +33,12 @@ function App() {
 					</Route>
 					<Route path='/others'>
 						<Others />
+					</Route>
+					<Route path='/addbusiness'>
+						<AddBusiness />
+					</Route>
+					<Route path='*'>
+						<NotFound />
 					</Route>
 				</Switch>
 			</Layout>
