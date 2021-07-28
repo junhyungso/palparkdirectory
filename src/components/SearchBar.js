@@ -7,7 +7,7 @@ const SearchBar = (props) => {
 						<form className={classes.form}>
 							<label>Search: </label>
 							<input />
-							<button>Submit</button>
+							<button className='btn'>Submit</button>
 						</form>
 		);
 }
