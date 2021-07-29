@@ -21,7 +21,7 @@ const AddBusiness = () => {
 
     console.log(submitData);
     axios
-      .post("/business", submitData)
+      .post("/business.json", submitData)
       .then((res) => {
         console.log(res);
         history.push("/");

@@ -6,12 +6,11 @@ const Homepage = () => {
 	const businessData = useHttp();
     return (
         <>
-            <p>Homepage</p>
-						<ul>
-							{businessData.map(bus => 
-								<BusinessInfo key={bus.address} bus={bus} />
-							)}						
-						</ul>
+					<ul>
+						{businessData.map(bus => 
+							<BusinessInfo key={bus.address} bus={bus} />
+						)}						
+					</ul>
         </>
         
     );
