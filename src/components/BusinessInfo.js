@@ -4,7 +4,7 @@ const BusinessInfo = (props) => {
   return (
     <li>
       <Card>
-        <div>{props.bus.name}</div>
+        <div><strong>{props.bus.name}</strong></div>
 				<div>{props.bus.type}</div>
         <div>{props.bus.address}</div>
         <div>{props.bus.contact}</div>
